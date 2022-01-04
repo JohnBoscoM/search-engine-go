@@ -1,5 +1,5 @@
 import React from 'react'
-//import './components/SearchBar.css';
+import './components/SearchBar.css';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -12,7 +12,7 @@ class SearchBar extends React.Component{
     return(
         <div>
             <h3>GO</h3>
-            <input
+            <input className='searchBox'
             id = "searchBar"
             onChange={this.handleChange}
             value={this.state.text}
