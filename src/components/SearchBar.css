@@ -1,0 +1,10 @@
+.flex-container{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+}
+
+.searchBox{
+    
+}

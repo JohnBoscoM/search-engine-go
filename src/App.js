@@ -1,25 +1,22 @@
 import logo from './logo.svg';
+import SearchBar from './components/searchbar/SearchBar';
 import './App.css';
+import React from 'react';
 
-function App() {
+class App extends React.Component{
+  state = {
+    searchText: ''
+  }
+
+  handleChange = (event) => {
+    this.state({searchText: event.target.value})
+  }
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <SearchBar handleChange={this.handleChange}></SearchBar>
     </div>
   );
 }
-
+}
 export default App;
